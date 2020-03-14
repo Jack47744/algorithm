@@ -2,57 +2,42 @@
 //  main.cpp
 //  Job Sequencing Problem
 //
-//  Created by Metis Sotangkur on 3/13/20.
+//  Created by Metis Sotangkur on 3/14/20.
 //  Copyright © 2020 Metis Sotangkur. All rights reserved.
 //
 
 #include <iostream>
-#include <algorithm>
+#include <queue>
 #include <vector>
-#include <map>
-#include <set>
+#include <algorithm>
 using namespace std;
 int main(int argc, const char * argv[]) {
     int N;
     cin>>N;
-    vector<pair<int, pair<int, char>>> jobs; // profit deadLine name
-    for(int i=0; i<N; i++){
-        char id;
-        int deadLine, profit;
-        cin>>id>>deadLine>>profit;
-        jobs.push_back({profit, {deadLine, id}});
-    }
-    vector<int> slot(1000);
-    vector<char> ans;
+    int slot[1000];
     for(int i=0; i<1000; i++) slot[i] = 1;
-    sort(jobs.begin(), jobs.end());
-    for(int i=N-1; i>=0; i--){
-        
-        for(int j = jobs[i].second.first; j>=1; j--){
-            if(slot[j]){
-                slot[j] = false;
-                ans.push_back(jobs[i].second.second);
+    priority_queue<pair<int, pair<int, char>>> data;
+    for(int i=0; i<N; i++){
+        char name;
+        int profit, deadLine;
+        cin>>name>>deadLine>>profit;
+        data.push({profit, {deadLine, name}});
+    }
+    vector<char> ans;
+    while(data.size()>0){
+        pair<int, pair<int, char>> tmp = data.top();
+        cout<<"name : "<<tmp.second.second<<" deadline : "<<tmp.second.first<<" profit : "<<tmp.first<<endl;
+        data.pop();
+        for(int i = tmp.second.first; i>=1; i--){
+            if(slot[i]){
+                slot[i] = 0;
+                ans.push_back(tmp.second.second);
                 break;
             }
         }
     }
-    for(auto x:ans) cout<<x<<" ";
-    
-    
-    
+    for(int i=0; i<5; i++) cout<<slot[i]<<" ";
+    cout<<"\n";
+    for(auto x : ans) cout<<x<<" ";
+    return 0;
 }
-/*
- 4
- a 4 20
- b 1 10
- c 1 40
- d 1 30
- 
- 5
- a 2 100
- b 1 10
- c 2 27
- d 1 25
- e 3 15
- 
- */

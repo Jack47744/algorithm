@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C730CBB8241C6BD000124741 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C730CBB7241C6BD000124741 /* main.cpp */; };
+		C730CB92241BE4B300124741 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C730CB91241BE4B300124741 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C730CBB2241C6BD000124741 /* CopyFiles */ = {
+		C730CB8C241BE4B300124741 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C730CBB4241C6BD000124741 /* Job Sequencing Problem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Job Sequencing Problem"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C730CBB7241C6BD000124741 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C730CB8E241BE4B300124741 /* Connect n ropes with minimum cost */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Connect n ropes with minimum cost"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C730CB91241BE4B300124741 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C730CBB1241C6BD000124741 /* Frameworks */ = {
+		C730CB8B241BE4B300124741 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,65 +38,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C730CBAB241C6BD000124741 = {
+		C730CB85241BE4B300124741 = {
 			isa = PBXGroup;
 			children = (
-				C730CBB6241C6BD000124741 /* Job Sequencing Problem */,
-				C730CBB5241C6BD000124741 /* Products */,
+				C730CB90241BE4B300124741 /* Connect n ropes with minimum cost */,
+				C730CB8F241BE4B300124741 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C730CBB5241C6BD000124741 /* Products */ = {
+		C730CB8F241BE4B300124741 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C730CBB4241C6BD000124741 /* Job Sequencing Problem */,
+				C730CB8E241BE4B300124741 /* Connect n ropes with minimum cost */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C730CBB6241C6BD000124741 /* Job Sequencing Problem */ = {
+		C730CB90241BE4B300124741 /* Connect n ropes with minimum cost */ = {
 			isa = PBXGroup;
 			children = (
-				C730CBB7241C6BD000124741 /* main.cpp */,
+				C730CB91241BE4B300124741 /* main.cpp */,
 			);
-			path = "Job Sequencing Problem";
+			path = "Connect n ropes with minimum cost";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C730CBB3241C6BD000124741 /* Job Sequencing Problem */ = {
+		C730CB8D241BE4B300124741 /* Connect n ropes with minimum cost */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C730CBBB241C6BD000124741 /* Build configuration list for PBXNativeTarget "Job Sequencing Problem" */;
+			buildConfigurationList = C730CB95241BE4B300124741 /* Build configuration list for PBXNativeTarget "Connect n ropes with minimum cost" */;
 			buildPhases = (
-				C730CBB0241C6BD000124741 /* Sources */,
-				C730CBB1241C6BD000124741 /* Frameworks */,
-				C730CBB2241C6BD000124741 /* CopyFiles */,
+				C730CB8A241BE4B300124741 /* Sources */,
+				C730CB8B241BE4B300124741 /* Frameworks */,
+				C730CB8C241BE4B300124741 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Job Sequencing Problem";
-			productName = "Job Sequencing Problem";
-			productReference = C730CBB4241C6BD000124741 /* Job Sequencing Problem */;
+			name = "Connect n ropes with minimum cost";
+			productName = "Connect n ropes with minimum cost";
+			productReference = C730CB8E241BE4B300124741 /* Connect n ropes with minimum cost */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C730CBAC241C6BD000124741 /* Project object */ = {
+		C730CB86241BE4B300124741 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Metis Sotangkur";
 				TargetAttributes = {
-					C730CBB3241C6BD000124741 = {
+					C730CB8D241BE4B300124741 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = C730CBAF241C6BD000124741 /* Build configuration list for PBXProject "Job Sequencing Problem" */;
+			buildConfigurationList = C730CB89241BE4B300124741 /* Build configuration list for PBXProject "Connect n ropes with minimum cost" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = C730CBAB241C6BD000124741;
-			productRefGroup = C730CBB5241C6BD000124741 /* Products */;
+			mainGroup = C730CB85241BE4B300124741;
+			productRefGroup = C730CB8F241BE4B300124741 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C730CBB3241C6BD000124741 /* Job Sequencing Problem */,
+				C730CB8D241BE4B300124741 /* Connect n ropes with minimum cost */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C730CBB0241C6BD000124741 /* Sources */ = {
+		C730CB8A241BE4B300124741 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C730CBB8241C6BD000124741 /* main.cpp in Sources */,
+				C730CB92241BE4B300124741 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C730CBB9241C6BD000124741 /* Debug */ = {
+		C730CB93241BE4B300124741 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		C730CBBA241C6BD000124741 /* Release */ = {
+		C730CB94241BE4B300124741 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +235,7 @@
 			};
 			name = Release;
 		};
-		C730CBBC241C6BD000124741 /* Debug */ = {
+		C730CB96241BE4B300124741 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -245,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		C730CBBD241C6BD000124741 /* Release */ = {
+		C730CB97241BE4B300124741 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -258,25 +258,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C730CBAF241C6BD000124741 /* Build configuration list for PBXProject "Job Sequencing Problem" */ = {
+		C730CB89241BE4B300124741 /* Build configuration list for PBXProject "Connect n ropes with minimum cost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C730CBB9241C6BD000124741 /* Debug */,
-				C730CBBA241C6BD000124741 /* Release */,
+				C730CB93241BE4B300124741 /* Debug */,
+				C730CB94241BE4B300124741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C730CBBB241C6BD000124741 /* Build configuration list for PBXNativeTarget "Job Sequencing Problem" */ = {
+		C730CB95241BE4B300124741 /* Build configuration list for PBXNativeTarget "Connect n ropes with minimum cost" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C730CBBC241C6BD000124741 /* Debug */,
-				C730CBBD241C6BD000124741 /* Release */,
+				C730CB96241BE4B300124741 /* Debug */,
+				C730CB97241BE4B300124741 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C730CBAC241C6BD000124741 /* Project object */;
+	rootObject = C730CB86241BE4B300124741 /* Project object */;
 }
