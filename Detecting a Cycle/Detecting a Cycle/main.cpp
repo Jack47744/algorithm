@@ -11,54 +11,55 @@
 #include <set>
 using namespace std;
 char color[1001];
-
-bool isDag(vector<vector<int>> G, int node, set<pair<int, int>> pairOfPoint){
-    color[node] = 'G';
-    for(auto x : G[node]){
-        if(color[x] == 'G' && pairOfPoint.find({node, x})==pairOfPoint.end()) return false;
-        if(color[x] == 'W'){
-            pairOfPoint.insert({node, x});
-            pairOfPoint.insert({x, node});
-            if(!isDag(G, x, pairOfPoint)) return false;
+int checked[1001];
+int N, E;
+int ppp = 0;
+vector<int> G[1001];
+void dfs(int now, int last){
+    checked[now] = 1;
+    for(int i=0; i<G[now].size(); i++){
+        if(last == G[now][i]) continue;
+        if(checked[G[now][i]]){
+            ppp=1;
+            return;
+        }
+        else dfs(G[now][i], now);
+    }
+}
+bool mainDfs(){
+    
+    ppp = 0;
+    for(int i=0; i<N; i++){
+        if(!checked[i]){
+            dfs(i, -1);
         }
     }
-    //cout<<"\n";
-    color[node] = 'B';
-    return true;
+    return ppp;
 }
-bool bfsMain(vector<vector<int>> G){
-    for(int i=0; i<G.size(); i++) color[i] = 'W';
-    set<pair<int, int>> pairOfPoint;
-    for(int i=0; i<G.size(); i++){
-        if(color[i] == 'W'){
-            if(!isDag(G, i, pairOfPoint)) return false;
-        }
-    }
-    return true;
-}
-
 int main(int argc, const char * argv[]) {
     int T;
     cin>>T;
-    //vector<bool> ans;
+    vector<bool> ans;
     for(int i=0; i<T; i++){
-        int N, E;
+        
         cin>>N>>E;
-        bool ans = false;
-        vector<vector<int>> G(N);
+        for(int i=0; i<N; i++) checked[i] = 0;
+        for(int i=0; i<N; i++) G[i].clear();
+        
         for(int j=0; j<E; j++){
             int x, y;
             cin>>x>>y;
             G[x].push_back(y);
             G[y].push_back(x);
         }
-        if(!bfsMain(G)) ans = true;
-        else ans = false;
-        if(ans) cout<<"YES"<<endl;
+        ans.push_back(mainDfs());
+        
+    }
+    cout<<"\n";
+    for(auto x:ans){
+        if(x) cout<<"YES"<<endl;
         else cout<<"NO"<<endl;
     }
-    //cout<<"\n";
-    //for(auto x:ans) cout<<x<<endl;
     return 0;
 }
 /*
