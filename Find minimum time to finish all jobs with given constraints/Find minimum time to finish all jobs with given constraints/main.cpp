@@ -2,42 +2,54 @@
 //  main.cpp
 //  Find minimum time to finish all jobs with given constraints
 //
-//  Created by Metis Sotangkur on 3/14/20.
+//  Created by Metis Sotangkur on 3/15/20.
 //  Copyright © 2020 Metis Sotangkur. All rights reserved.
 //
 
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <queue>
 using namespace std;
+bool isPossible(int data[], int time, int K, int n){
+    int numberOfEmployer = 1;
+    int currentTime = 0;
+    for(int i=0; i<n;){
+        if(data[i] + currentTime > time){
+            currentTime = 0;
+            numberOfEmployer+=1;
+        }
+        else{
+            currentTime += data[i];
+            i++;
+            
+        }
+    }
+    return numberOfEmployer<=K;
+}
 int main(int argc, const char * argv[]) {
-    int K ,T, N;
+    int K, T, N;
     cin>>K>>T>>N;
-    priority_queue<int> data2;
-    for(int i=0; i<N; i++) {
-        int number;
-        cin>>number;
-        data2.push(number);
+    int job[K];
+    int maxTimeOfJob = 0, overAllTime = 0;
+    for(int i=0; i<N; i++){
+        cin>>job[i];
+        maxTimeOfJob = max(maxTimeOfJob, job[i]);
+        overAllTime += maxTimeOfJob;
     }
-    priority_queue<int, vector<int>, greater<int>> pq;
-    for(int i=0; i<K && data2.size()>0; i++){
-        pq.push(data2.top());
-        data2.pop();
+    int left = maxTimeOfJob;
+    int right = overAllTime;
+    int ans = right;
+    while(left<=right){
+        int mid = (left+right)/2;
+        if(mid>=maxTimeOfJob and isPossible(job, mid, K, N)){
+            right = mid - 1;
+            ans = min(ans, mid);
+        }
+        else{
+            left = mid + 1;
+        }
     }
-    while(data2.size()>0){
-        int tmp = pq.top();
-        pq.pop();
-        tmp += data2.top();
-        data2.pop();
-        pq.push(tmp);
-    }
-    int k = 0;
-    while(pq.size()>0){
-        k = pq.top();
-        pq.pop();
-    }
-    cout<<T*k<<endl;
+    
+    cout<<ans*T<<endl;
     
     return 0;
 }

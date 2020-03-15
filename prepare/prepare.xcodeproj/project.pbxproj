@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C730CC50241E855700124741 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C730CC4F241E855700124741 /* main.cpp */; };
+		C77A42F2241E317400780A39 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C77A42F1241E317400780A39 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C730CC4A241E855700124741 /* CopyFiles */ = {
+		C77A42EC241E317300780A39 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C730CC4C241E855700124741 /* Find minimum time to finish all jobs with given constraints */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Find minimum time to finish all jobs with given constraints"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C730CC4F241E855700124741 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C77A42EE241E317300780A39 /* prepare */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = prepare; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77A42F1241E317400780A39 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C730CC49241E855700124741 /* Frameworks */ = {
+		C77A42EB241E317300780A39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,95 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C730CC43241E855700124741 = {
+		C77A42E5241E317300780A39 = {
 			isa = PBXGroup;
 			children = (
-				C730CC4E241E855700124741 /* Find minimum time to finish all jobs with given constraints */,
-				C730CC4D241E855700124741 /* Products */,
+				C77A42F0241E317300780A39 /* prepare */,
+				C77A42EF241E317300780A39 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C730CC4D241E855700124741 /* Products */ = {
+		C77A42EF241E317300780A39 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C730CC4C241E855700124741 /* Find minimum time to finish all jobs with given constraints */,
+				C77A42EE241E317300780A39 /* prepare */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C730CC4E241E855700124741 /* Find minimum time to finish all jobs with given constraints */ = {
+		C77A42F0241E317300780A39 /* prepare */ = {
 			isa = PBXGroup;
 			children = (
-				C730CC4F241E855700124741 /* main.cpp */,
+				C77A42F1241E317400780A39 /* main.cpp */,
 			);
-			path = "Find minimum time to finish all jobs with given constraints";
+			path = prepare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C730CC4B241E855700124741 /* Find minimum time to finish all jobs with given constraints */ = {
+		C77A42ED241E317300780A39 /* prepare */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C730CC53241E855700124741 /* Build configuration list for PBXNativeTarget "Find minimum time to finish all jobs with given constraints" */;
+			buildConfigurationList = C77A42F5241E317400780A39 /* Build configuration list for PBXNativeTarget "prepare" */;
 			buildPhases = (
-				C730CC48241E855700124741 /* Sources */,
-				C730CC49241E855700124741 /* Frameworks */,
-				C730CC4A241E855700124741 /* CopyFiles */,
+				C77A42EA241E317300780A39 /* Sources */,
+				C77A42EB241E317300780A39 /* Frameworks */,
+				C77A42EC241E317300780A39 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Find minimum time to finish all jobs with given constraints";
-			productName = "Find minimum time to finish all jobs with given constraints";
-			productReference = C730CC4C241E855700124741 /* Find minimum time to finish all jobs with given constraints */;
+			name = prepare;
+			productName = prepare;
+			productReference = C77A42EE241E317300780A39 /* prepare */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C730CC44241E855700124741 /* Project object */ = {
+		C77A42E6241E317300780A39 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Metis Sotangkur";
 				TargetAttributes = {
-					C730CC4B241E855700124741 = {
-						CreatedOnToolsVersion = 11.3;
+					C77A42ED241E317300780A39 = {
+						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
-			buildConfigurationList = C730CC47241E855700124741 /* Build configuration list for PBXProject "Find minimum time to finish all jobs with given constraints" */;
+			buildConfigurationList = C77A42E9241E317300780A39 /* Build configuration list for PBXProject "prepare" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = C730CC43241E855700124741;
-			productRefGroup = C730CC4D241E855700124741 /* Products */;
+			mainGroup = C77A42E5241E317300780A39;
+			productRefGroup = C77A42EF241E317300780A39 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C730CC4B241E855700124741 /* Find minimum time to finish all jobs with given constraints */,
+				C77A42ED241E317300780A39 /* prepare */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C730CC48241E855700124741 /* Sources */ = {
+		C77A42EA241E317300780A39 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C730CC50241E855700124741 /* main.cpp in Sources */,
+				C77A42F2241E317400780A39 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C730CC51241E855700124741 /* Debug */ = {
+		C77A42F3241E317400780A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -158,6 +157,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		C730CC52241E855700124741 /* Release */ = {
+		C77A42F4241E317400780A39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,6 +216,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -235,22 +236,20 @@
 			};
 			name = Release;
 		};
-		C730CC54241E855700124741 /* Debug */ = {
+		C77A42F6241E317400780A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YC8TCU5KXS;
-				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C730CC55241E855700124741 /* Release */ = {
+		C77A42F7241E317400780A39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YC8TCU5KXS;
-				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -258,25 +257,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C730CC47241E855700124741 /* Build configuration list for PBXProject "Find minimum time to finish all jobs with given constraints" */ = {
+		C77A42E9241E317300780A39 /* Build configuration list for PBXProject "prepare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C730CC51241E855700124741 /* Debug */,
-				C730CC52241E855700124741 /* Release */,
+				C77A42F3241E317400780A39 /* Debug */,
+				C77A42F4241E317400780A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C730CC53241E855700124741 /* Build configuration list for PBXNativeTarget "Find minimum time to finish all jobs with given constraints" */ = {
+		C77A42F5241E317400780A39 /* Build configuration list for PBXNativeTarget "prepare" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C730CC54241E855700124741 /* Debug */,
-				C730CC55241E855700124741 /* Release */,
+				C77A42F6241E317400780A39 /* Debug */,
+				C77A42F7241E317400780A39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C730CC44241E855700124741 /* Project object */;
+	rootObject = C77A42E6241E317300780A39 /* Project object */;
 }
