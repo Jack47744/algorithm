@@ -13,59 +13,39 @@
 #include <algorithm>
 #include <stack>
 using namespace std;
-int main(int argc, const char * argv[]) {
-    stack<int> s1, s2, s3;
-    vector<int> tmp1, tmp2, tmp3;
-    int sum1 = 0, sum2 = 0, sum3 = 0;
-    int a, b, c;
-    cin>>a>>b>>c;
-    for(int i=0; i<a; i++){
-        int n;
-        cin>>n;
-        sum1+=n;
-        tmp1.push_back(n);
+vector<int> G[100100];
+int count2[100100];
+bool checked[100100];
+void dfs(int now, int last, int count){
+   // cout<<now<<" "<<last<<" "<<count<<endl;
+    if(checked[now]){
+        cout<<count - count2[now]<<endl;
+        exit(0);
+        return;
+       
     }
-    for(int i=0; i<b; i++){
-        int n;
-        cin>>n;
-        sum2+=n;
-        tmp2.push_back(n);
-    }
-    for(int i=0; i<c; i++){
-        int n;
-        cin>>n;
-        sum3+=n;
-        tmp3.push_back(n);
-    }
-    for(int i = tmp1.size()-1; i>=0; i--){
-        s1.push(tmp1[i]);
-    }
-    for(int i = tmp2.size()-1; i>=0; i--){
-        s2.push(tmp2[i]);
-    }
-    for(int i = tmp3.size()-1; i>=0; i--){
-        s3.push(tmp3[i]);
-    }
-    while(s1.size()>0 and s2.size()>0 and s3.size()>0){
-        if(sum1 == sum2 and sum2 == sum3){
-            cout<<sum1<<endl;
-            exit(0);
-        }
-        int tmp = max(sum1, max(sum2, sum3));
-        if(tmp == sum1){
-            sum1 -= s1.top();
-            s1.pop();
-        }
-        else if(tmp == sum2){
-            sum2 -= s2.top();
-            s2.pop();
-        }
+    checked[now] = true;
+    count2[now] = count;
+    for(auto x : G[now]){
+        if(x == last) continue;
         else{
-            sum3 -= s3.top();
-            s3.pop();
+            dfs(x, now, count+1);
         }
-        
     }
-    cout<<0<<endl;
+}
+int main(int argc, const char * argv[]) {
+    int n;
+    cin>>n;
+    for(int i=0; i<n; i++){
+        int a, b;
+        cin>>a>>b;
+        G[a].push_back(b);
+        G[b].push_back(a);
+    }
+    for(int i=0; i<n; i++){
+        count2[i] = 0;
+        checked[i] = false;
+    }
     
+    dfs(0, -1, 1);
 }
