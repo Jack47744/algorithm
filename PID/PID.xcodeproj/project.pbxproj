@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C76690BC2435B45B00309436 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C76690BB2435B45B00309436 /* main.cpp */; };
+		C77A80462436ECDD00D99066 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C77A80452436ECDD00D99066 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C76690B62435B45B00309436 /* CopyFiles */ = {
+		C77A80402436ECDD00D99066 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C76690B82435B45B00309436 /* Kruskal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Kruskal; sourceTree = BUILT_PRODUCTS_DIR; };
-		C76690BB2435B45B00309436 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C77A80422436ECDD00D99066 /* PID */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PID; sourceTree = BUILT_PRODUCTS_DIR; };
+		C77A80452436ECDD00D99066 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C76690B52435B45B00309436 /* Frameworks */ = {
+		C77A803F2436ECDD00D99066 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,94 +38,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C76690AF2435B45B00309436 = {
+		C77A80392436ECDD00D99066 = {
 			isa = PBXGroup;
 			children = (
-				C76690BA2435B45B00309436 /* Kruskal */,
-				C76690B92435B45B00309436 /* Products */,
+				C77A80442436ECDD00D99066 /* PID */,
+				C77A80432436ECDD00D99066 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C76690B92435B45B00309436 /* Products */ = {
+		C77A80432436ECDD00D99066 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C76690B82435B45B00309436 /* Kruskal */,
+				C77A80422436ECDD00D99066 /* PID */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C76690BA2435B45B00309436 /* Kruskal */ = {
+		C77A80442436ECDD00D99066 /* PID */ = {
 			isa = PBXGroup;
 			children = (
-				C76690BB2435B45B00309436 /* main.cpp */,
+				C77A80452436ECDD00D99066 /* main.cpp */,
 			);
-			path = Kruskal;
+			path = PID;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C76690B72435B45B00309436 /* Kruskal */ = {
+		C77A80412436ECDD00D99066 /* PID */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C76690BF2435B45B00309436 /* Build configuration list for PBXNativeTarget "Kruskal" */;
+			buildConfigurationList = C77A80492436ECDD00D99066 /* Build configuration list for PBXNativeTarget "PID" */;
 			buildPhases = (
-				C76690B42435B45B00309436 /* Sources */,
-				C76690B52435B45B00309436 /* Frameworks */,
-				C76690B62435B45B00309436 /* CopyFiles */,
+				C77A803E2436ECDD00D99066 /* Sources */,
+				C77A803F2436ECDD00D99066 /* Frameworks */,
+				C77A80402436ECDD00D99066 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Kruskal;
-			productName = Kruskal;
-			productReference = C76690B82435B45B00309436 /* Kruskal */;
+			name = PID;
+			productName = PID;
+			productReference = C77A80422436ECDD00D99066 /* PID */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C76690B02435B45B00309436 /* Project object */ = {
+		C77A803A2436ECDD00D99066 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Metis Sotangkur";
 				TargetAttributes = {
-					C76690B72435B45B00309436 = {
-						CreatedOnToolsVersion = 10.3;
+					C77A80412436ECDD00D99066 = {
+						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = C76690B32435B45B00309436 /* Build configuration list for PBXProject "Kruskal" */;
+			buildConfigurationList = C77A803D2436ECDD00D99066 /* Build configuration list for PBXProject "PID" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = C76690AF2435B45B00309436;
-			productRefGroup = C76690B92435B45B00309436 /* Products */;
+			mainGroup = C77A80392436ECDD00D99066;
+			productRefGroup = C77A80432436ECDD00D99066 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C76690B72435B45B00309436 /* Kruskal */,
+				C77A80412436ECDD00D99066 /* PID */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C76690B42435B45B00309436 /* Sources */ = {
+		C77A803E2436ECDD00D99066 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76690BC2435B45B00309436 /* main.cpp in Sources */,
+				C77A80462436ECDD00D99066 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C76690BD2435B45B00309436 /* Debug */ = {
+		C77A80472436ECDD00D99066 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -157,7 +158,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		C76690BE2435B45B00309436 /* Release */ = {
+		C77A80482436ECDD00D99066 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -216,7 +216,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -236,20 +235,22 @@
 			};
 			name = Release;
 		};
-		C76690C02435B45B00309436 /* Debug */ = {
+		C77A804A2436ECDD00D99066 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YC8TCU5KXS;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		C76690C12435B45B00309436 /* Release */ = {
+		C77A804B2436ECDD00D99066 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YC8TCU5KXS;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -257,25 +258,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C76690B32435B45B00309436 /* Build configuration list for PBXProject "Kruskal" */ = {
+		C77A803D2436ECDD00D99066 /* Build configuration list for PBXProject "PID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C76690BD2435B45B00309436 /* Debug */,
-				C76690BE2435B45B00309436 /* Release */,
+				C77A80472436ECDD00D99066 /* Debug */,
+				C77A80482436ECDD00D99066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C76690BF2435B45B00309436 /* Build configuration list for PBXNativeTarget "Kruskal" */ = {
+		C77A80492436ECDD00D99066 /* Build configuration list for PBXNativeTarget "PID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C76690C02435B45B00309436 /* Debug */,
-				C76690C12435B45B00309436 /* Release */,
+				C77A804A2436ECDD00D99066 /* Debug */,
+				C77A804B2436ECDD00D99066 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C76690B02435B45B00309436 /* Project object */;
+	rootObject = C77A803A2436ECDD00D99066 /* Project object */;
 }

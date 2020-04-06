@@ -9,67 +9,71 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <queue>
 using namespace std;
-double w, ans = 0;
+double w;
 int n;
-int u=0;
 double W[101], V[101];
-vector<pair<double, double>> data;
-double sum(double d[], int m, vector<int> v){
-    double k = 0;
-    for(int i=0; i<m; i++){
-        if(v[i]) k += d[i];
+double maxValue = 0;
+double h(int i, double availableWeight){
+    priority_queue<pair<double, pair<double, double>>> pq;
+    for(int j=i; j<n; j++){
+        pq.push({V[j]/W[j], {W[j], V[j]}});
     }
-    return k;
+    double tmpWeight = availableWeight;
+    double ans = 0;
+    while(pq.size()>0){
+        pair<double, pair<double, double>> tmp = pq.top();
+        pq.pop();
+        if(tmpWeight - tmp.second.first >= 0){
+            tmpWeight -= tmp.second.first;
+            ans += tmp.second.second;
+        }
+        else if(tmpWeight>0){
+            ans += tmp.first * tmpWeight;
+            tmpWeight = 0;
+        }
+        else if(tmpWeight<=0) break;
+    }
+    return ans;
 }
-void t(double currentWeight, int m, vector<int> v){
-    u++;
-    //cout<<u<<endl;
-    //cout<<currentWeight<<" "<<m<<" ";
-    //for(auto x : v) cout<<x<<" ";
+double mySum(vector<int> v, int start, int end, double data[]){
+    double ans = 0;
+    for(int i=start; i<=end; i++){
+        if(v[i]) ans += data[i];
+    }
+    return ans;
+}
+void f(int i, vector<int> v, double nowWeight, double nowValue){
+    //cout<<i<<" "<<nowWeight<<" "<<nowValue<<" "<<mySum(v, 0, i-1, V) + h(i, w-nowWeight)<<"\n";
+    //for(auto x:v) cout<<x<<" ";
     //cout<<"\n";
-    if(currentWeight>w) return;
-    if(m==n or currentWeight + W[m] > w){
-        ans = max(ans, sum(V, m, v));
-        return;
+    if(nowWeight>w) return;
+    if(mySum(v, 0, i-1, V) + h(i, w-nowWeight) <= maxValue) return;
+    if(i<n){
+        vector<int> tmp = v;
+        tmp.push_back(0);
+        f(i+1, tmp, nowWeight, nowValue);
+        v.push_back(1);
+        f(i+1, v, nowWeight + W[i], nowValue + V[i]);
     }
     else{
-        vector<int> tmp1 = v;
-        vector<int> tmp2 = v;
-        tmp1.push_back(0);
-        tmp2.push_back(1);
-        t(currentWeight, m+1, tmp1);
-        
-        t(currentWeight + W[m], m+1, tmp2);
+       // cout<<mySum(v, 0, i-1, V)<<endl;
+        maxValue = max(maxValue, mySum(v, 0, i-1, V));
     }
+    
 }
 int main(int argc, const char * argv[]) {
     cin>>w>>n;
-    vector<double> v;
-    vector<double> w;
     for(int i=0; i<n; i++){
-        double vi;
-        cin>>vi;
-        v.push_back(vi);
+        cin>>V[i];
     }
     for(int i=0; i<n; i++){
-        double wi;
-        cin>>wi;
-        w.push_back(wi);
+        cin>>W[i];
     }
-    for(int i=0; i<n; i++){
-        data.push_back({w[i], v[i]});
-    }
-    sort(data.begin(), data.end());
-    for(int i=0; i<n; i++){
-        W[i] = data[i].first;
-        V[i] = data[i].second;
-    }
-    vector<int> p;
-    t(0, 0, p);
-    printf("%.4f", ans);
-    //cout<<ans<<endl;
-    return 0;
+    vector<int> tmp;
+    f(0, tmp, 0, 0);
+    printf("%.4f", maxValue);
 }
 /*
  10.0 4

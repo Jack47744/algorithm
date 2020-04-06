@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C76690BC2435B45B00309436 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C76690BB2435B45B00309436 /* main.cpp */; };
+		C76690CF243B0D7300309436 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C76690CE243B0D7300309436 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C76690B62435B45B00309436 /* CopyFiles */ = {
+		C76690C9243B0D7300309436 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C76690B82435B45B00309436 /* Kruskal */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Kruskal; sourceTree = BUILT_PRODUCTS_DIR; };
-		C76690BB2435B45B00309436 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C76690CB243B0D7300309436 /* Team Work */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Team Work"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C76690CE243B0D7300309436 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C76690B52435B45B00309436 /* Frameworks */ = {
+		C76690C8243B0D7300309436 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,94 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C76690AF2435B45B00309436 = {
+		C76690C2243B0D7300309436 = {
 			isa = PBXGroup;
 			children = (
-				C76690BA2435B45B00309436 /* Kruskal */,
-				C76690B92435B45B00309436 /* Products */,
+				C76690CD243B0D7300309436 /* Team Work */,
+				C76690CC243B0D7300309436 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C76690B92435B45B00309436 /* Products */ = {
+		C76690CC243B0D7300309436 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C76690B82435B45B00309436 /* Kruskal */,
+				C76690CB243B0D7300309436 /* Team Work */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C76690BA2435B45B00309436 /* Kruskal */ = {
+		C76690CD243B0D7300309436 /* Team Work */ = {
 			isa = PBXGroup;
 			children = (
-				C76690BB2435B45B00309436 /* main.cpp */,
+				C76690CE243B0D7300309436 /* main.cpp */,
 			);
-			path = Kruskal;
+			path = "Team Work";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C76690B72435B45B00309436 /* Kruskal */ = {
+		C76690CA243B0D7300309436 /* Team Work */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C76690BF2435B45B00309436 /* Build configuration list for PBXNativeTarget "Kruskal" */;
+			buildConfigurationList = C76690D2243B0D7300309436 /* Build configuration list for PBXNativeTarget "Team Work" */;
 			buildPhases = (
-				C76690B42435B45B00309436 /* Sources */,
-				C76690B52435B45B00309436 /* Frameworks */,
-				C76690B62435B45B00309436 /* CopyFiles */,
+				C76690C7243B0D7300309436 /* Sources */,
+				C76690C8243B0D7300309436 /* Frameworks */,
+				C76690C9243B0D7300309436 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Kruskal;
-			productName = Kruskal;
-			productReference = C76690B82435B45B00309436 /* Kruskal */;
+			name = "Team Work";
+			productName = "Team Work";
+			productReference = C76690CB243B0D7300309436 /* Team Work */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C76690B02435B45B00309436 /* Project object */ = {
+		C76690C3243B0D7300309436 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Metis Sotangkur";
 				TargetAttributes = {
-					C76690B72435B45B00309436 = {
+					C76690CA243B0D7300309436 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
-			buildConfigurationList = C76690B32435B45B00309436 /* Build configuration list for PBXProject "Kruskal" */;
+			buildConfigurationList = C76690C6243B0D7300309436 /* Build configuration list for PBXProject "Team Work" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = C76690AF2435B45B00309436;
-			productRefGroup = C76690B92435B45B00309436 /* Products */;
+			mainGroup = C76690C2243B0D7300309436;
+			productRefGroup = C76690CC243B0D7300309436 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C76690B72435B45B00309436 /* Kruskal */,
+				C76690CA243B0D7300309436 /* Team Work */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C76690B42435B45B00309436 /* Sources */ = {
+		C76690C7243B0D7300309436 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76690BC2435B45B00309436 /* main.cpp in Sources */,
+				C76690CF243B0D7300309436 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C76690BD2435B45B00309436 /* Debug */ = {
+		C76690D0243B0D7300309436 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		C76690BE2435B45B00309436 /* Release */ = {
+		C76690D1243B0D7300309436 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +236,7 @@
 			};
 			name = Release;
 		};
-		C76690C02435B45B00309436 /* Debug */ = {
+		C76690D3243B0D7300309436 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -245,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		C76690C12435B45B00309436 /* Release */ = {
+		C76690D4243B0D7300309436 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -257,25 +257,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C76690B32435B45B00309436 /* Build configuration list for PBXProject "Kruskal" */ = {
+		C76690C6243B0D7300309436 /* Build configuration list for PBXProject "Team Work" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C76690BD2435B45B00309436 /* Debug */,
-				C76690BE2435B45B00309436 /* Release */,
+				C76690D0243B0D7300309436 /* Debug */,
+				C76690D1243B0D7300309436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C76690BF2435B45B00309436 /* Build configuration list for PBXNativeTarget "Kruskal" */ = {
+		C76690D2243B0D7300309436 /* Build configuration list for PBXNativeTarget "Team Work" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C76690C02435B45B00309436 /* Debug */,
-				C76690C12435B45B00309436 /* Release */,
+				C76690D3243B0D7300309436 /* Debug */,
+				C76690D4243B0D7300309436 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C76690B02435B45B00309436 /* Project object */;
+	rootObject = C76690C3243B0D7300309436 /* Project object */;
 }

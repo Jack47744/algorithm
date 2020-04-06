@@ -2,62 +2,77 @@
 //  main.cpp
 //  Kruskal
 //
-//  Created by Metis Sotangkur on 3/23/20.
+//  Created by Metis Sotangkur on 4/2/20.
 //  Copyright © 2020 Metis Sotangkur. All rights reserved.
 //
 
 #include <iostream>
-#include <set>
 #include <vector>
+#include <queue>
 using namespace std;
-int V, E;
-int people[1010];
-int edge[1010][1010];
-bool inMST[1010];
-vector<int> G[1010];
-int minIndex(vector<int> d){
-    int ans = -1;
-    int k = -1;
-    for(int i=1; i<=V; i++){
-        if(d[i]>k){
-            k = d[i];
-            ans = i;
-        }
-    }
-    return ans;
+int N, M, Q;
+int p[5050], h[5050];
+int ans[5050];
+int findSet(int a){
+    while(p[a]!=a) a = p[a];
+    return p[a];
 }
-vector<int> kruskal(){
-    vector<int> d(1010);
-    for(int i=1; i<=V; i++) {
-        d[i] = 1000000;
-        inMST[i] = false;
+void unionSet(int a, int b){
+    if(h[a]>h[b]){
+        p[b] = a;
     }
-    d[1] = 0;
-    for(int i=1; i<=V; i++){
-        int u = minIndex(d);
-        d[u] = 1000000;
-        inMST[u] = true;
-        for(int v = 1; v<=V; v++){
-            if(!inMST[v] and G[u][v]<d[v]){
-                d[v] = G[u][v];
-            }
-        }
+    else{
+        p[a] = b;
+        if(h[a] == h[b]) h[b]++;
     }
-    for(int i=2; i<=V; i++){
-        d[i] = d[i]*people[i];
-    }
-    return d;
 }
 int main(int argc, const char * argv[]) {
-    cin>>V>>E;
-    for(int i=2; i<=V; i++) cin>>people[i];
-    for(int i=0; i<E; i++){
-        int a, b, length;
-        cin>>a>>b>>length;
-        edge[a][b] = length;
-        edge[b][a] = length;
-        G[a].push_back(b);
-        G[b].push_back(a);
+    cin>>N>>M>>Q;
+    for(int i=0; i<N; i++){
+        p[i] = i;
+        h[i] = 0;
     }
-    vector<int> ans = kruskal();
+    priority_queue<pair<int, pair<int, int>>, vector<pair<int, pair<int, int>>>, greater<pair<int, pair<int, int>>>> pq;
+    int edgeNumber = 0;
+    for(int i=0; i<M; i++){
+        int a, b, c;
+        cin>>a>>b>>c;
+        pq.push({c, {a, b}});
+    }
+    int k = N;
+    //cout<<"pq has size of "<<pq.size()<<"\n";
+    while(edgeNumber<N-1){
+        
+        pair<int, pair<int, int>> tmp = pq.top();
+        pq.pop();
+        int tmpW = tmp.first;
+        int tmpA = tmp.second.first;
+        int tmpB = tmp.second.second;
+        //cout<<tmpA<<" "<<tmpB<<" weight is "<<tmpW<<" pq has size of "<<pq.size()<<"\n";
+        if(findSet(tmpA)!=findSet(tmpB)){
+            edgeNumber++;
+            unionSet(findSet(tmpA), findSet(tmpB));
+            ans[--k] = tmpW;
+        }
+        
+    }
+    while(Q--){
+        int q;
+        cin>>q;
+        cout<<ans[q]<<"\n";
+    }
+    return 0;
 }
+/*
+ 5 6 4
+ 0 1 20
+ 0 2 10
+ 2 3 30
+ 1 3 10
+ 2 4 40
+ 3 4 50
+ 1
+ 2
+ 3
+ 4
+ */
