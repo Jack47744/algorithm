@@ -2,7 +2,7 @@
 //  main.cpp
 //  Graph Coloring
 //
-//  Created by Metis Sotangkur on 3/23/20.
+//  Created by Metis Sotangkur on 4/13/20.
 //  Copyright © 2020 Metis Sotangkur. All rights reserved.
 //
 
@@ -12,46 +12,40 @@
 #include <set>
 using namespace std;
 int N, E;
+
 vector<int> G[51];
-int ans = 100;
-void f(int x[], int now){
-    if(now > N){
-        bool checked[51];
-        for(int i=0; i<N; i++){
-            checked[i] = false;
+int minColor = 51;
+void f(int node, vector<int> v, set<int> s){
+    
+    if(node==N){
+        cout<<node<<" "<<s.size()<<" ";
+        for(int i=0; i<v.size(); i++) cout<<v[i]<<" ";
+        cout<<"\n";
+        int k = s.size();
+        for(auto i : s){
+            cout<<i<<" ";
         }
-        int p = 0;
-        for(int i=0; i<N; i++){
-           // cout<<x[i]<<" ";
-            if(!checked[x[i]]){
-                checked[x[i]] = true;
-                p++;
-            }
+        cout<<"\n";
+        
+        
+        if(minColor>k){
+            minColor = k;
+            cout<<k<<"........\n";
         }
-        //cout<<"\n";
-        ans = min(p, ans);
         return;
     }
-    bool isBreak = false;
-    for(int i=0; i<=now; i++){
-        for(auto v : G[now]){
-            if(x[v]==i){
-                isBreak = true;
-                break;
+    if(s.size() >= minColor) return;
+    for(int i=0; i<=node; i++){
+        set<int> tmp = s;
+        for(auto x:G[node]){
+            if(i!=v[x]){
+                v[node] = i;
+                tmp.insert(i);
+                f(node+1, v, tmp);
             }
         }
-        if(isBreak){
-            isBreak = false;
-            continue;
-        }
-        else{
-            x[now] = i;
-            f(x, now+1);
-        }
-        
     }
 }
-
 int main(int argc, const char * argv[]) {
     cin>>N>>E;
     for(int i=0; i<E; i++){
@@ -60,8 +54,23 @@ int main(int argc, const char * argv[]) {
         G[a].push_back(b);
         G[b].push_back(a);
     }
-    int color[N+1];
-    for(int i=0; i<N; i++) color[i] = -1;
-    f(color, 0);
-    cout<<ans<<endl;
+    vector<int> v(N);
+    set<int> s;
+    s.insert(0);
+    for(int i=0; i<N; i++){
+        v[i] = -1;
+    }
+    f(0, v, s);
+    cout<<minColor<<endl;
+    
 }
+/*
+ 
+ 4 6
+ 0 1
+ 0 2
+ 0 3
+ 1 2
+ 1 3
+ 2 3
+ */

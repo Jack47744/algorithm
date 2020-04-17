@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C730CCC224290CD800124741 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C730CCC124290CD800124741 /* main.cpp */; };
+		C7A4875324440BFA00637639 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7A4875224440BFA00637639 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C730CCBC24290CD800124741 /* CopyFiles */ = {
+		C7A4874D24440BFA00637639 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C730CCBE24290CD800124741 /* Graph Coloring */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Graph Coloring"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C730CCC124290CD800124741 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C7A4874F24440BFA00637639 /* Graph Coloring */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Graph Coloring"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7A4875224440BFA00637639 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C730CCBB24290CD800124741 /* Frameworks */ = {
+		C7A4874C24440BFA00637639 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,26 +38,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C730CCB524290CD800124741 = {
+		C7A4874624440BFA00637639 = {
 			isa = PBXGroup;
 			children = (
-				C730CCC024290CD800124741 /* Graph Coloring */,
-				C730CCBF24290CD800124741 /* Products */,
+				C7A4875124440BFA00637639 /* Graph Coloring */,
+				C7A4875024440BFA00637639 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C730CCBF24290CD800124741 /* Products */ = {
+		C7A4875024440BFA00637639 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C730CCBE24290CD800124741 /* Graph Coloring */,
+				C7A4874F24440BFA00637639 /* Graph Coloring */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C730CCC024290CD800124741 /* Graph Coloring */ = {
+		C7A4875124440BFA00637639 /* Graph Coloring */ = {
 			isa = PBXGroup;
 			children = (
-				C730CCC124290CD800124741 /* main.cpp */,
+				C7A4875224440BFA00637639 /* main.cpp */,
 			);
 			path = "Graph Coloring";
 			sourceTree = "<group>";
@@ -65,13 +65,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C730CCBD24290CD800124741 /* Graph Coloring */ = {
+		C7A4874E24440BFA00637639 /* Graph Coloring */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C730CCC524290CD800124741 /* Build configuration list for PBXNativeTarget "Graph Coloring" */;
+			buildConfigurationList = C7A4875624440BFA00637639 /* Build configuration list for PBXNativeTarget "Graph Coloring" */;
 			buildPhases = (
-				C730CCBA24290CD800124741 /* Sources */,
-				C730CCBB24290CD800124741 /* Frameworks */,
-				C730CCBC24290CD800124741 /* CopyFiles */,
+				C7A4874B24440BFA00637639 /* Sources */,
+				C7A4874C24440BFA00637639 /* Frameworks */,
+				C7A4874D24440BFA00637639 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,24 +79,24 @@
 			);
 			name = "Graph Coloring";
 			productName = "Graph Coloring";
-			productReference = C730CCBE24290CD800124741 /* Graph Coloring */;
+			productReference = C7A4874F24440BFA00637639 /* Graph Coloring */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C730CCB624290CD800124741 /* Project object */ = {
+		C7A4874724440BFA00637639 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Metis Sotangkur";
 				TargetAttributes = {
-					C730CCBD24290CD800124741 = {
+					C7A4874E24440BFA00637639 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
-			buildConfigurationList = C730CCB924290CD800124741 /* Build configuration list for PBXProject "Graph Coloring" */;
+			buildConfigurationList = C7A4874A24440BFA00637639 /* Build configuration list for PBXProject "Graph Coloring" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -104,29 +104,29 @@
 				en,
 				Base,
 			);
-			mainGroup = C730CCB524290CD800124741;
-			productRefGroup = C730CCBF24290CD800124741 /* Products */;
+			mainGroup = C7A4874624440BFA00637639;
+			productRefGroup = C7A4875024440BFA00637639 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C730CCBD24290CD800124741 /* Graph Coloring */,
+				C7A4874E24440BFA00637639 /* Graph Coloring */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C730CCBA24290CD800124741 /* Sources */ = {
+		C7A4874B24440BFA00637639 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C730CCC224290CD800124741 /* main.cpp in Sources */,
+				C7A4875324440BFA00637639 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C730CCC324290CD800124741 /* Debug */ = {
+		C7A4875424440BFA00637639 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -184,7 +184,7 @@
 			};
 			name = Debug;
 		};
-		C730CCC424290CD800124741 /* Release */ = {
+		C7A4875524440BFA00637639 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -235,7 +235,7 @@
 			};
 			name = Release;
 		};
-		C730CCC624290CD800124741 /* Debug */ = {
+		C7A4875724440BFA00637639 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -245,7 +245,7 @@
 			};
 			name = Debug;
 		};
-		C730CCC724290CD800124741 /* Release */ = {
+		C7A4875824440BFA00637639 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -258,25 +258,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C730CCB924290CD800124741 /* Build configuration list for PBXProject "Graph Coloring" */ = {
+		C7A4874A24440BFA00637639 /* Build configuration list for PBXProject "Graph Coloring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C730CCC324290CD800124741 /* Debug */,
-				C730CCC424290CD800124741 /* Release */,
+				C7A4875424440BFA00637639 /* Debug */,
+				C7A4875524440BFA00637639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C730CCC524290CD800124741 /* Build configuration list for PBXNativeTarget "Graph Coloring" */ = {
+		C7A4875624440BFA00637639 /* Build configuration list for PBXNativeTarget "Graph Coloring" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C730CCC624290CD800124741 /* Debug */,
-				C730CCC724290CD800124741 /* Release */,
+				C7A4875724440BFA00637639 /* Debug */,
+				C7A4875824440BFA00637639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C730CCB624290CD800124741 /* Project object */;
+	rootObject = C7A4874724440BFA00637639 /* Project object */;
 }
