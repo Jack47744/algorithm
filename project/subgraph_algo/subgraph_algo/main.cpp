@@ -12,22 +12,19 @@
 #include <vector>
 using namespace std;
 int v1, e1, v2, e2;
-map<char, vector<char>> G;
-map<char, vector<char>> H;
-vector<char> V1;
-vector<char> V2;
-set<pair<char, char>> E1;
-set<pair<char, char>> E2;
+vector<int> G[100];
+vector<int> H[100];
+set<pair<int, int>> E1;
+set<pair<int, int>> E2;
 int visitNode = 0;
-bool isoCheck(map<char, char> mp){
+bool isoCheck(map<int, int> mp){
     for(auto x : E2){
         if(E1.find({mp[x.first], mp[x.second]}) == E1.end()) return false;
     }
     return true;
 }
-bool isSubgraphIso(int step, map<char, char> mp, set<char> s){
+bool isSubgraphIso(int step, map<int, int> mp, set<int> s){
     visitNode++;
-    char vertexOfH = V2[step];
     if(v2>v1) return false;
     if(step == v2){
         if(isoCheck(mp)){
@@ -37,11 +34,11 @@ bool isSubgraphIso(int step, map<char, char> mp, set<char> s){
             return true;
         }
     }
-    for(auto x:V1){
+    for(int x=0; x<v1; x++){
         if(s.find(x) != s.end()) continue;  // checked if the map is one-to-one
         
         bool isContinue = false;
-        for(auto y : H[vertexOfH]){
+        for(auto y : H[step]){
             if(mp.find(y) != mp.end() and E1.find({x, mp[y]}) == E1.end()){
                 isContinue = true;
                 break;
@@ -50,7 +47,7 @@ bool isSubgraphIso(int step, map<char, char> mp, set<char> s){
         if(isContinue) continue;
         
         int unmappedH = 0, unmappedG = 0;
-        for(auto y : H[vertexOfH]){
+        for(auto y : H[step]){
             if(mp.find(y) == mp.end()) unmappedH++;
         }
         for(auto y : G[x]){
@@ -58,9 +55,9 @@ bool isSubgraphIso(int step, map<char, char> mp, set<char> s){
         }
         if(unmappedH>unmappedG) continue;
         
-        map<char, char> tmp = mp;
-        set<char> tmp2 = s;
-        tmp[vertexOfH] = x;
+        map<int, int> tmp = mp;
+        set<int> tmp2 = s;
+        tmp[step] = x;
         tmp2.insert(x);
         if(isSubgraphIso(step + 1, tmp, tmp2)) return true;
     }
@@ -69,41 +66,160 @@ bool isSubgraphIso(int step, map<char, char> mp, set<char> s){
 int main(int argc, const char * argv[]) {
     cout<<"input graph G"<<endl;
     cin>>v1>>e1;
-    set<char> tmp2;
     for(int i=0; i<e1; i++){
-        char a, b;
+        int a, b;
         cin>>a>>b;
         G[a].push_back(b);
         G[b].push_back(a);
         E1.insert({a, b});
         E1.insert({b, a});
-        tmp2.insert(a);
-        tmp2.insert(b);
     }
-    for(auto x:tmp2) V1.push_back(x);
     cout<<"input graph H"<<endl;
     cin>>v2>>e2;
-    set<char> tmp;
     for(int i=0; i<e2; i++){
-        char a, b;
+        int a, b;
         cin>>a>>b;
         H[a].push_back(b);
         H[b].push_back(a);
         E2.insert({a, b});
         E2.insert({b, a});
-        tmp.insert(a);
-        tmp.insert(b);
     }
-    for(auto x:tmp){
-        V2.push_back(x);
-    }
-    map<char, char> mp;
-    set<char> s;
+    map<int, int> mp;
+    set<int> s;
     if(isSubgraphIso(0, mp, s)) cout<<"YES"<<endl;
     else cout<<"NO"<<endl;
     cout<<"visit "<<visitNode<<" nodes."<<endl;
     return 0;
 }
+/*
+ example 1
+ 7 9
+ 0 2
+ 2 1
+ 2 3
+ 2 6
+ 1 6
+ 3 4
+ 4 6
+ 4 5
+ 6 5
+ //////
+ 5 5
+ 0 1
+ 1 3
+ 3 4
+ 4 2
+ 2 0
+ 
+ example 2
+ 5 5
+ 0 1
+ 1 2
+ 2 3
+ 3 4
+ 4 0
+ /////
+ 5 4
+ 0 1
+ 1 2
+ 2 3
+ 3 0
+ 
+ exmaple 3
+ 8 11
+ 0 1
+ 0 4
+ 0 6
+ 1 5
+ 4 5
+ 4 7
+ 5 7
+ 5 2
+ 7 2
+ 2 3
+ 3 6
+ /////
+ 7 8
+ 1 6
+ 6 0
+ 6 3
+ 0 5
+ 3 5
+ 5 2
+ 2 4
+ 4 1
+ 
+ example 4
+ 8 11
+ 0 1
+ 0 4
+ 0 6
+ 1 5
+ 4 5
+ 4 7
+ 5 7
+ 5 2
+ 7 2
+ 2 3
+ 3 6
+ ///////
+ 8 10
+ 0 1
+ 0 5
+ 0 6
+ 1 2
+ 6 2
+ 2 3
+ 3 7
+ 3 4
+ 7 5
+ 4 5
+ 
+ example 5
+ 16 17
+ 0 1
+ 1 2
+ 2 3
+ 3 4
+ 4 5
+ 5 0
+ 4 6
+ 6 7
+ 7 8
+ 8 9
+ 9 10
+ 10 11
+ 11 6
+ 8 12
+ 12 13
+ 12 14
+ 14 15
+ ///////
+ 13 13
+ 0 1
+ 1 2
+ 2 3
+ 2 4
+ 4 5
+ 5 6
+ 6 7
+ 7 8
+ 8 9
+ 9 4
+ 6 11
+ 11 10
+ 11 12
+ 
+ 
+ 
+ 
+ 
+ 
+ */
+
+
+
+
 /*
  5 7
  a b
